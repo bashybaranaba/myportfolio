@@ -325,6 +325,53 @@ section {
   }
 }
 
+/* Style for the credits link */
+.credits-link p {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #fff;
+  text-align: center;
+}
+
+/* Style for the credits modal */
+.credits-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* High z-index to ensure it's above everything else */
+}
+
+.credits-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  max-width: 450px; /* Adjust as needed */
+}
+
+.close-credits-modal {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.credits-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.credits-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 /* Footer */
 footer {
   background: #333;

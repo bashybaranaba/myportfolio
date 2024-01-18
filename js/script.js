@@ -19,3 +19,20 @@ function showSlides(n) {
   }
   slides[slideIndex].style.display = "block";
 }
+
+document.getElementById("credits-link").addEventListener("click", function () {
+  document.getElementById("credits-modal").style.display = "flex";
+});
+
+document
+  .querySelector(".close-credits-modal")
+  .addEventListener("click", function () {
+    document.getElementById("credits-modal").style.display = "none";
+  });
+
+window.onclick = function (event) {
+  let modal = document.getElementById("credits-modal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
