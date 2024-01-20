@@ -49,25 +49,25 @@ header {
 .logo a {
   color: #333;
   text-decoration: none;
-  font-size: 1em; /* Adjust size as needed */
+  font-size: 1em;
   font-weight: bold;
+}
+
+.logo img,
+.my-img {
+  border-radius: 50%;
 }
 
 .logo img {
   width: 35px;
   height: 35px;
-  margin-top: 1px;
-  margin-bottom: 4px;
   margin-right: 6px;
-  border-radius: 50%;
 }
 
 .my-img {
   width: 150px;
   height: 150px;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
+  margin: 10px;
 }
 
 .large-title {
@@ -132,7 +132,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px; /* Adjust spacing between skills as needed */
+  gap: 24px;
 }
 
 .skill {
@@ -142,12 +142,12 @@ section {
 }
 
 .skill img {
-  max-width: 100%; /* Ensures the image is responsive */
+  max-width: 100%;
   height: auto;
 }
 
 .skill p {
-  margin-top: 4px; /* Space between image and text */
+  margin-top: 4px;
 }
 
 #projects {
@@ -175,7 +175,7 @@ section {
 /* Carousel container styles */
 .carousel {
   width: 100%;
-  max-width: 900px; /* Maximum width of the carousel */
+  max-width: 900px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -199,7 +199,7 @@ section {
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  object-fit: contain; /* Contain the image within its dimensions */
+  object-fit: contain;
 }
 
 .project-details {
@@ -254,7 +254,7 @@ section {
   transition: 0.6s ease;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 10; /* Ensure buttons are above images */
+  z-index: 10;
 }
 
 /* Position the "prev" button to the left */
@@ -270,19 +270,6 @@ section {
 /* Styling for the active slide */
 .slides .active {
   display: block;
-}
-
-/* Responsive media queries */
-@media screen and (max-width: 768px) {
-  .slides .slide img {
-    max-width: 100%; /* On smaller screens, allow image to take full container width */
-  }
-
-  .project-details {
-    width: 100%; /* Full width on smaller screens */
-    left: 0; /* Reset left position */
-    transform: none; /* Remove transform for mobile */
-  }
 }
 
 /* Cantacts section */
@@ -327,17 +314,6 @@ section {
   color: #0275d8;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .contact-options {
-    flex-direction: column;
-  }
-
-  .contact-link:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
-
 /* Style for the credits link */
 .credits-link p {
   cursor: pointer;
@@ -357,7 +333,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000; /* High z-index to ensure it's above everything else */
+  z-index: 10000;
 }
 
 .credits-content {
@@ -365,7 +341,7 @@ section {
   padding: 20px;
   border-radius: 5px;
   width: 50%;
-  max-width: 450px; /* Adjust as needed */
+  max-width: 450px;
 }
 
 .close-credits-modal {
@@ -396,61 +372,11 @@ footer {
   width: 100%;
 }
 
-/* Responsive Typography */
-/* Scale down the large title on smaller screens */
-@media screen and (max-width: 768px) {
-  .large-title {
-    font-size: 2.6em;
-  }
-
-  .headline-text {
-    font-size: 1.2em;
-  }
-
-  .about-text {
-    font-size: 1em;
-  }
+.hamburger {
+  display: none;
 }
 
-/* Responsive Navigation */
-/* Convert the horizontal menu to a vertical menu on small screens */
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide by default, show via JavaScript toggle */
-  }
-
-  nav ul.active {
-    display: block; /* Show when active */
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-}
-
-/* Responsive Project Grid */
-/* Adjust the project grid to stack on smaller screens */
-@media screen and (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr; /* Stack the projects */
-    padding: 20px;
-  }
-
-  .slides .slide img {
-    max-width: 100%;
-  }
-
-  .project-details {
-    width: 100%;
-    left: 0;
-    transform: none;
-    padding: 10px;
-  }
-}
-
-/* Responsive Contact Section */
-/* Adjust contact section layout for smaller screens */
+/* Responsive Design */
 @media (max-width: 600px) {
   .contact-options {
     flex-direction: column;
@@ -462,21 +388,23 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .large-title {
+    font-size: 2.6em;
+  }
+
+  .headline-text {
+    font-size: 1.2em;
+  }
+
+  .about-text,
+  .skill p {
+    font-size: 1em;
+  }
+
   .break {
     display: none;
   }
-}
 
-/* ... existing styles ... */
-
-/* Hide the hamburger menu on larger screens */
-.hamburger {
-  display: none;
-}
-
-/* Mobile view styles */
-@media screen and (max-width: 768px) {
-  /* Show the hamburger menu button on smaller screens */
   .hamburger {
     display: block;
     position: absolute;
@@ -484,36 +412,46 @@ footer {
     top: 0px;
     background: none;
     border: none;
-    color: #333; /* Change as per your color scheme */
+    color: #333;
     font-size: 2em;
     padding: 10px;
-    z-index: 1001; /* Make sure it's above other elements */
+    z-index: 1001;
   }
 
-  /* Hide the navigation links on smaller screens */
   nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjust based on the height of your header */
+    top: 60px;
     width: 100%;
     left: 0;
-    background-color: #fff; /* Change as per your color scheme */
+    background-color: #fff;
     padding: 0;
     margin: 0;
-    z-index: 1000; /* Ensures the dropdown is above other content */
+    z-index: 1000;
   }
 
-  /* Display the navigation links when 'active' class is added by JavaScript */
   nav ul.active {
     display: flex;
     background-color: #fff;
   }
 
   nav ul li {
+    display: block;
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    border-bottom: 1px solid #ddd; /* Optional: adds a separator between links */
+    border-bottom: 1px solid #ddd;
+  }
+
+  .project-grid,
+  .slides .slide img,
+  .project-details {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 10px;
   }
 }
