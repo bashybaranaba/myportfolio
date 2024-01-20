@@ -213,7 +213,6 @@ section {
   color: #fff;
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
