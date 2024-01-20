@@ -45,3 +45,12 @@ function toggleMenu() {
     navLinks.style.display = "block";
   }
 }
+
+// Listen for window resize events
+window.addEventListener("resize", function () {
+  var navLinks = document.querySelector("nav ul");
+  if (window.innerWidth > 768 && navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+  }
+  navLinks.removeAttribute("style");
+});
