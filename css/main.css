@@ -227,6 +227,13 @@ section {
   margin-bottom: 10px;
 }
 
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 /* Display details on hover */
 .slide:hover .project-details {
   opacity: 1; /* Make details visible */
