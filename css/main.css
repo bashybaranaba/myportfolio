@@ -395,3 +395,125 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* Responsive Typography */
+/* Scale down the large title on smaller screens */
+@media screen and (max-width: 768px) {
+  .large-title {
+    font-size: 2.6em;
+  }
+
+  .headline-text {
+    font-size: 1.2em;
+  }
+
+  .about-text {
+    font-size: 1em;
+  }
+}
+
+/* Responsive Navigation */
+/* Convert the horizontal menu to a vertical menu on small screens */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide by default, show via JavaScript toggle */
+  }
+
+  nav ul.active {
+    display: block; /* Show when active */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/* Responsive Project Grid */
+/* Adjust the project grid to stack on smaller screens */
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack the projects */
+    padding: 20px;
+  }
+
+  .slides .slide img {
+    max-width: 100%;
+  }
+
+  .project-details {
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 10px;
+  }
+}
+
+/* Responsive Contact Section */
+/* Adjust contact section layout for smaller screens */
+@media (max-width: 600px) {
+  .contact-options {
+    flex-direction: column;
+  }
+
+  .contact-link:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .break {
+    display: none;
+  }
+}
+
+/* ... existing styles ... */
+
+/* Hide the hamburger menu on larger screens */
+.hamburger {
+  display: none;
+}
+
+/* Mobile view styles */
+@media screen and (max-width: 768px) {
+  /* Show the hamburger menu button on smaller screens */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    background: none;
+    border: none;
+    color: #333; /* Change as per your color scheme */
+    font-size: 2em;
+    padding: 10px;
+    z-index: 1001; /* Make sure it's above other elements */
+  }
+
+  /* Hide the navigation links on smaller screens */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on the height of your header */
+    width: 100%;
+    left: 0;
+    background-color: #fff; /* Change as per your color scheme */
+    padding: 0;
+    margin: 0;
+    z-index: 1000; /* Ensures the dropdown is above other content */
+  }
+
+  /* Display the navigation links when 'active' class is added by JavaScript */
+  nav ul.active {
+    display: flex;
+    background-color: #fff;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd; /* Optional: adds a separator between links */
+  }
+}

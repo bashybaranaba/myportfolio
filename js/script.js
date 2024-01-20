@@ -36,3 +36,12 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function toggleMenu() {
+  var navLinks = document.querySelector("nav ul");
+  if (navLinks.style.display === "block") {
+    navLinks.style.display = "none";
+  } else {
+    navLinks.style.display = "block";
+  }
+}
