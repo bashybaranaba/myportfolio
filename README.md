@@ -4,6 +4,8 @@
 
 This portfolio website showcases my skills, projects, and experience as a Software Developer. It is built using HTML, CSS, and Vanilla JavaScript, implementing responsive design and interactive elements.
 
+The site is live [here](https://bashybaranaba.github.io/myportfolio/)
+
 ## Technologies Used
 
 - HTML5
